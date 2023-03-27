@@ -1,10 +1,13 @@
-/*
-Skriver ut panelen högst upp samt footern längst ned
- */
-
 function panel() {
     const header = document.querySelector("#panel");
     const path = window.location.pathname;
+
+    let items = 0;
+
+    if(localStorage.getItem("cart")){
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      items = cart.itemCount;
+    }
   
     if (path === "/") {
       window.location.pathname = "/index.html";
@@ -20,7 +23,7 @@ function panel() {
             <a href="produkter.html">Produkter</a>
           </li>
           <li class="${path.includes("/order.html") ? "active" : ""}">
-            <a href="order.html">Beställning</a>
+            <a id="itemCount" href="order.html">Cart (${items})</a>
           </li>
           <li class="${path.includes("/index.html") ? "active" : ""}">
             <a href="index.html">Startsida</a>

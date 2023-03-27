@@ -31,25 +31,18 @@ function categoryEvent(category){
   getAllProducts();
 }
 
-//Lista med IDs som har matchat fåran sökning
 let idList = JSON.parse(window.sessionStorage.getItem("productIDList"));
 
-
-
-//fetcha produkter baserat på categori, sök matchningar
-//annars skriv ut alla produkter
 function getAllProducts(){
     fetch("https://fakestoreapi.com/products")
         .then((response) => response.json())
         .then((data) => {
-          //Skriv ut alla produkter om categori valts
           if(window.sessionStorage.getItem("category")){
             data.forEach((product) => {
               if(product.category == window.sessionStorage.getItem("category")){
                 createProductDiv(product.image, product.title, product.price, product.id);
               }
             });
-            //Skriv ut alla produkter som matchat en sökning
           } else if (idList){
             data.forEach((product) => {
               idList.forEach(e =>{
@@ -58,7 +51,6 @@ function getAllProducts(){
                 }
               })
             });
-            //Annars skriv ut alla
           } else {
             data.forEach((product) => {
               createProductDiv(product.image, product.title, product.price, product.id);
@@ -82,8 +74,6 @@ function createProductDiv(imageURL, title, price, id){
   })
   productsContainer.appendChild(div);
 }
-
-//Metod som printar HTML
 function printProductHTML(imageURL, title, price){
   return `   
           <figure class="product-header">

@@ -1,4 +1,3 @@
-//Product klass så att alla info om produkten sparas på vettigt sett
 export default class Product {
     constructor(id, title, price, category, description, imageURL, quantity){
         this.id = id;
