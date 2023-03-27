@@ -27,7 +27,7 @@ if(!localStorage.getItem('cart')){
             Phone: ${cart.customer.phone}
         `;
         document.querySelector("#price").innerHTML = `
-            Pris: ${total} €
+            Price: ${total} €
         `;
         localStorage.removeItem('cart');
     }

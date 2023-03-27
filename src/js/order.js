@@ -8,8 +8,7 @@ if(localStorage.getItem("cart")){
     const order = document.querySelector('#orders');
     cart = JSON.parse(localStorage.getItem("cart"));
     cart.productList.forEach(e => {
-        let elements = productHTML(order, e);
-        addEventListener(elements, e);
+        addEventListener(productHTML(order, e), e);
         total += e.price * e.quantity;
     });
     total = returnRound(total);
