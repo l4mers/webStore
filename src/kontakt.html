@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- responsivitet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>KIMCHI STORE</title>
+    <!-- länk till stilmallen -->
+    <link href="css/stilmall.css" rel="Stylesheet" type="text/css" />
+    <script src="js/panels.js" type="module" defer></script>
+    <script src="js/contact.js" type="module" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Allura&family=Dosis:wght@300&family=Karla:wght@300&family=Quicksand:wght@300&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <!-- navigeringsmeny som en lista -->
+    <div id="panel"></div>
+
+    <header>
+      <h1>KIMCHI STORE</h1>
+      <hr />
+      <h2>En låtsasbutik</h2>
+    </header>
+
+    <div class="flex-containerkontakt">
+      <h4>Kontakta oss här:</h4>
+      <form action="action_page.html">
+        <!-- label för att användaren ska kunna fylla i sina uppgifter-->
+        <input
+          type="textkontakt"
+          id="fname"
+          name="firstname"
+          placeholder="Skriv ditt namn här.."
+        />
+        <input
+          type="textkontakt"
+          id="lname"
+          name="lastname"
+          placeholder="Skriv din mejl-adress här.."
+        />
+        <!-- här kan användaren skriva sitt meddelande och ämne -->
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Skriv ett meddelande"
+          style="height: 100px"
+        ></textarea>
+        <br />
+        <!-- knapp för att skicka in formulär-->
+        <button type="submitkontakt" id="submitkontakt">Submit</button>
+      </form>
+      <br />
+    </div>
+
+    <!-- footer -->
+    <footer id="footer" class="footer"></footer>
+  </body>
+</html>

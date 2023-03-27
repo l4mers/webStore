@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- responsivitet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Webbutik</title>
+    <!-- länk till stilmallen -->
+    <link href="css/stilmall.css" rel="Stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="js/panels.js" type="module" defer></script>
+    <script src="js/product-info.js" type="module" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Allura&family=Dosis:wght@300&family=Karla:wght@300&family=Quicksand:wght@300&display=swap");
+    </style>
+  </head>
+  <div id="panel"></div>
+  <body>
+    <!-- navigeringsmeny som en lista -->
+    <header>
+      <h1>KIMCHI STORE</h1>
+      <hr />
+      <h2>En låtsasbutik</h2>
+    </header>
+
+    <div class="mainsection flex flex-row gap-6px">
+      <div id="singleProductContainer" class="singleProductContainer">
+        <div id="singleProduct" class="singleProduct">
+          <figure id="singleProductImg" class="singleProductImg">
+            <!-- BILD -->
+          </figure>
+          <article class="singleProductInfo">
+            <div id="titleInfo">
+              <!-- Titel description-->
+            </div>
+            <div class="singleProductPrice">
+              <p id="price"></p>
+              <button id="ORDER">ADD TO CART</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="footer"></footer>
+  </body>
+</html>

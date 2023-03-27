@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- responsivitet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Webbutik</title>
+    <!-- länk till stilmallen -->
+    <link href="css/stilmall.css" rel="Stylesheet" type="text/css" />
+    <script src="js/panels.js" type="module" defer></script>
+    <script src="js/action-page.js" type="module" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Allura&family=Dosis:wght@300&family=Karla:wght@300&family=Quicksand:wght@300&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <!-- navigeringsmeny som en lista -->
+    <div id="panel"></div>
+    <header>
+      <h1>KIMCHI STORE</h1>
+      <hr />
+      <h2>En låtsasbutik</h2>
+    </header>
+
+    <div class="flex-containerorder">
+      <div class="ordertext">
+        Tack för din beställning!<br />
+      <hr><br>
+        <p id="address"></p>
+        <p id="email"></p>
+        <p id="name"></p>
+        <p id="phone"></p>
+        <p id="title"></p>
+        <p id="price"></p>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer"></footer>
+  </body>
+</html>

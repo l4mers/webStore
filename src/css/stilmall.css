@@ -1,0 +1,756 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  
+  font-family: "Manrope", sans-serif;
+}
+
+/*Bakgrunden */
+body {
+  background-color: lightblue;
+  background-size: cover;
+  background-position: absolute;
+  background-attachment:fixed;
+  margin:0;
+  padding:0;
+}
+
+/* all text inom paragrafer ändras här */
+p {
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  color: #f1f1f1; 
+  width: 85%; 
+  padding: 5px; 
+}
+
+h1 {
+  color:rgba(24, 22, 50, 0.463);
+  font-size: 100px;
+  font-family: 'Sen', sans-serif;
+  padding: 0;
+  margin: 0;
+  padding-bottom: -10px;
+  text-align: center;
+}
+
+h2 {
+  color:rgba(1, 0, 0, 0.2);
+  font-size: 30px;
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 10px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  display: block; 
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 25px;
+}
+
+/*Används på kontakt*/
+h4 {
+  display: block; 
+  color: black;
+  text-align: center;
+  padding: 0px;
+  text-decoration: none;
+  font-family: 'Tahoma', sans-serif;
+}
+
+
+
+/* STARTSIDA */
+.mainsection {
+  background: rgba(255, 255, 255, 0.505); 
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  text-align: left;
+  padding: 20px;
+  margin-top: 2%;
+  margin-bottom: 30px;
+}
+
+form.example input[type=text] {
+  font-size: 17px;
+  border: 1px solid grey;
+  background: #f1f1f1;
+}
+
+form.example button {
+  width:15%;
+  height: 42px;
+  line-height: 42px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+.example {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.searchInput {
+  z-index: 2;
+  width: 100%;
+  height: 42px;
+  position: relative;
+}
+
+.searchInput input {
+  width: 100%;
+  height: 100%;
+}
+
+.searchDropdown {
+  position: static;
+  width: 100%;
+  left: 0;
+  bottom: -42px;
+  background-color: #fff;
+  border-radius: 0 0 3px 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  flex-direction: column;
+}
+
+.searchDropdown span {
+  line-height: 42px;
+  display: block;
+  padding-left: 8px;
+}
+
+.searchDropdown span:hover {
+  cursor: pointer;
+  background-color: #79bdf2;
+}
+
+#categoryhead {
+  background-color: #ffffff83;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  font-family: 'Sen', sans-serif;
+  color: rgb(71, 71, 107);
+  letter-spacing: 15px;
+}
+
+.info {
+  background-color: #ffffff99;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.categoryrow{
+  display: flex;
+  flex-direction: row;
+}
+
+.categorycolumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  flex: auto;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: auto;
+  
+}
+
+.categorycolumn:hover .catimg {
+  opacity: 0.6;
+  transition: .3s ease;
+  transform: translate(1%, 1%);
+  -ms-transform: translate(1%, 1%);
+    cursor: pointer;
+
+}
+.categorycolumn:hover .categoryrow {
+  opacity: 1;
+}
+
+
+.categoryrow::after {
+  margin: auto;
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.catimg {
+  object-fit: contain;
+  padding: 10px;
+  max-width: 110px;
+  max-height: 110px;
+}
+
+input[type=pren],[type=prenbutt]{
+height: 10%;
+}
+/*produkt container*/
+#products {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* singleProduct container */
+
+.singleProductContainer {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.singleProduct {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.singleProductImg {
+  width: 50%;
+  flex: 1;
+  min-width: 282px;
+}
+
+.singleProductImg img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 493px;
+}
+
+.singleProductInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+ justify-content: space-between;
+ gap: 40px;
+ flex: 1;
+ min-width: 282px;
+
+}
+
+.singleProductInfo div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.singleProductInfo ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.singleProductInfo ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+.singleProductInfo ::-webkit-scrollbar-thumb {
+  background: #888;  
+}
+
+.singleProductInfo ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.singleProductInfo p {
+  font-size: 16px;
+ line-height: 28px;
+ text-align: center;
+ max-height: 200px;
+ overflow: auto;
+}
+
+.singleProductPrice {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.singleProductPrice p {
+  text-align: start;
+  font-weight: 600;
+ }
+
+.singleProductPrice span {
+ color:#3c784d;
+font-size: 20px;
+font-weight: 700;
+}
+
+.singleProductPrice button {
+  background-color: #4f46e5;
+  height: 48px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  cursor: pointer;
+  line-height: 48px;
+  transition: all;
+  transition-duration: 250ms;
+}
+
+.singleProductPrice button:hover {
+  background-color: #3932b3;
+  
+}
+
+  
+/* produkt elementen */
+.product-card {
+  position: relative;
+  border-radius: 15px;
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+  
+.product-title {
+  font-family: 'Sen', sans-serif;
+  width: 100%;
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+.product-header{
+  display: flex;
+  justify-content: center;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.product-body{
+  padding: 25px;
+}
+  
+.product-header img {
+  max-width: 100%;
+  padding: 10px;
+}
+  
+
+.price{
+  position: absolute;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product-card:hover {
+  scale: 1.1;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+/*Annorlunda styling för topp producter*/
+#topproducts{
+  margin-top: 50px;
+  margin-bottom: 40px;
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+}
+  
+#topproducts .product-title {
+  font-size: 0.9rem;
+}
+
+#topproducts .product-body{
+  padding: 10px;
+} 
+  
+#topproducts .price {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+
+/* navigerings listan längst upp*/
+.nav {
+  display: block;
+  overflow: hidden;
+   background: rgb(0, 0, 0); 
+  background: rgba(1, 0, 0, 0.685); /*genomskinlighet på navigeringsmenyn */
+  position: -webkit-fixed; 
+  position: fixed; /* ska sitta fast vid toppen */
+  top: 0;
+  width: 100%;
+  z-index: 3; /* z-index +3 för att lägga navigerings menyn över andra saker på sidan */
+  /*float: right;*/
+}
+
+li {
+  float: right; /* listan ska vara horistontell åt vänster */
+  width: 25%; /* varje knapp i menyn får 25% vardera */
+}
+
+li a {
+  display: block; 
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-family: 'Karla', sans-serif;
+}
+
+li a:hover {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 350ms;
+  background-color: #000000; 
+}
+
+li a:hover:not(.active) {
+ background: rgba(120, 179, 255, 0.4); /* genomskinlig navigeringsmeny - kontakt*/
+}
+  .active {
+ background: rgb(120, 179, 255, 0.4); 
+
+}
+.active:hover {
+  background: rgba(120, 179, 255, 0.4); /* när man hovrar över */
+}
+
+.nav li.active a {
+  background: rgb(120, 179, 255, 0.4); 
+}
+
+
+/* footer */
+.footer {
+  background: rgba(1, 0, 0, 0.751);
+  font-family: 'Karla', sans-serif;
+  font-size: 0.8em;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  color: white;
+  z-index: 2;
+  height: 30px;
+}
+
+.flex-containerkontakt {
+  background: rgba(255, 255, 255, 0.4); 
+  float: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+  padding: 5px;
+  display: block;
+  text-align: center;
+}
+
+input[type=textkontakt], [type=subject], textarea {
+  width: 40%;
+margin: auto;
+content: "";
+clear: both;
+display: table;
+padding: 7px;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+
+
+
+/*BESTÄLLNINGSSIDA */ 
+
+.flex-containerbeställning {
+  background: rgba(255, 255, 255, 0.4); 
+  float: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+  padding: 5px;
+  display: block;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+input[type=text], input[type=email], select, textarea {
+  display: inline-block;
+  padding: 11px;
+  border: 1px solid #000000; 
+  border-radius: 3px; /*rundade kanter */
+}
+
+/* container för fieldset */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* fieldset formulär för bokning */
+.fieldset-for-beställning {
+  background-color: #ffffff;
+  width: 90%;
+  height: 50%;
+  margin: auto;
+  padding: 10px;
+}
+  
+.legend-for-beställning1 {
+  text-transform: uppercase;
+  background-color: #000;
+  color: white;
+  padding: 5px 10px;
+}
+
+#legend-for-boka-2 {
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+}
+  
+/* här ska personen själv skriva in */
+  
+.output {
+  font: 1rem 'Fira Sans', sans-serif;
+}
+  
+input:radio {
+  margin: .4rem;
+}
+
+.cart{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-and-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 400px;
+}
+
+.product-and-title h3{
+  font-family: 'Sen', sans-serif;
+  font-weight: 600;
+  font-size: 0.99em;
+}
+
+.product-img{
+  min-width: 75x;
+  height: 75px;
+  display: flex;
+  overflow: hidden;
+}
+
+.product-img img{
+  max-width: 100%;
+}
+
+.action-price{
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.quantity{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.quantity button{
+  width: 20px;
+  background-color: white;
+  border: solid 1px;
+  margin: 0 2px 0 2px;
+  height: 20px;
+}
+
+.quantity p{
+  margin-left: 10px;
+}
+
+
+/*Gustavs CSS*/
+
+.margin-top {
+  margin-top: 1rem;
+}
+
+.text-black {
+  color: #000;
+}
+
+.flex {
+  display: flex;
+}
+
+.max-768px {
+  max-width: 48rem;
+}
+
+.auto-margin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gap-16px {
+  gap: 1rem
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.margin-bottom-192px {
+  margin-bottom: 12rem;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.gap-6px{
+  gap: 0.50rem;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: rgb(219, 219, 2);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.max-hight-200px {
+  max-height: 200px;
+}
+
+.max-hight-150px {
+  max-height: 150px;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-2third {
+  width: 77.777777%;
+}
+
+.width-third {
+  width: 33.333333%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hight-full {
+  height: 100%;
+}
+
+.object-full {
+  object-fit: cover;
+}
+
+.break-words{
+  overflow-wrap: break-word;
+}
+
+/*ACTION PAGE */
+.flex-containerorder{
+  background-color: #f8f8f89e;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.ordertext {
+  text-align: left;
+  font-size: 20px;
+  padding: 20px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- responsivitet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Webbutik</title>
+    <!-- länk till stilmallen -->
+    <link href="css/stilmall.css" rel="Stylesheet" type="text/css" />
+    <script src="js/panels.js" type="module" defer></script>
+    <script src="js/products.js" type="module" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Allura&family=Dosis:wght@300&family=Karla:wght@300&family=Quicksand:wght@300&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <!-- navigeringsmeny som en lista -->
+    <div id="panel"></div>
+    <header>
+      <h2>Våra produkter</h2>
+    </header>
+    <div class="mainsection">
+      <hr class="margin-top" />
+
+      <div id="category">
+        <div class="categoryrow">
+          <div class="categorycolumn">
+            <a id="women">
+              <img src="images/womens.png" class="catimg" alt="women" />
+            </a>
+          </div>
+          <div class="categorycolumn">
+            <a id="men"
+              ><img src="images/mens.png" class="catimg" alt="men" />
+            </a>
+          </div>
+          <div class="categorycolumn">
+            <a id="jewelery"
+              ><img src="images/jewelry.png" class="catimg" alt="jewelry" />
+            </a>
+          </div>
+          <div class="categorycolumn">
+            <a id="electronic"
+              ><img
+                src="images/electronics.png"
+                class="catimg"
+                alt="electronic"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <!-- display products -->
+    <div id="products"></div>
+    <footer id="footer" class="footer"></footer>
+  </body>
+</html>
