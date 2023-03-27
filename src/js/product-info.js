@@ -33,7 +33,6 @@ if (sessionStorage.getItem("productID") == null){
         cart.productList.push(product);
         localStorage.setItem("cart", JSON.stringify(cart));
         document.querySelector("#itemCount").innerText = `Cart (${cart.itemCount})`;
-        localStorage.setItem("cart", JSON.stringify(cart));
       }
     })
 }
