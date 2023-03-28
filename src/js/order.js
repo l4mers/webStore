@@ -36,6 +36,7 @@ function productHTML(element, product){
     let subButton = document.createElement("button");
     subButton.innerHTML = "-";
     let productQuantity = document.createElement("p");
+
     productQuantity.innerText = `quantity: ${product.quantity}`;
     quantityContainer.appendChild(addButton);
     quantityContainer.appendChild(subButton);

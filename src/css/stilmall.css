@@ -152,7 +152,7 @@ form.example button:hover {
 }
 
 #categoryhead {
-  background-color: #ffffff83;
+  background-color: #ffffff99;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
@@ -563,10 +563,6 @@ input[type=text], input[type=email], select, textarea {
 .output {
   font: 1rem 'Fira Sans', sans-serif;
 }
-  
-input:radio {
-  margin: .4rem;
-}
 
 .cart{
   padding: 20px;
@@ -581,17 +577,18 @@ input:radio {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 400px;
 }
 
 .product-and-title h3{
   font-family: 'Sen', sans-serif;
   font-weight: 600;
   font-size: 0.99em;
+  max-width: 200px;
+  float: left;
 }
 
 .product-img{
-  min-width: 75x;
+  max-width: 120px;
   height: 75px;
   display: flex;
   overflow: hidden;
@@ -610,6 +607,7 @@ input:radio {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .quantity button{
@@ -623,6 +621,23 @@ input:radio {
 .quantity p{
   margin-left: 10px;
 }
+
+.submission button{
+  margin-top: 10px;
+  background-color: #95c8f1;
+  border: solid 1px;
+  border-radius: 4px;
+  height: 30px;
+  width: 50px;
+}
+
+
+
+
+
+
+
+
 
 
 /*Gustavs CSS*/
@@ -754,3 +769,89 @@ input:radio {
   font-size: 20px;
   padding: 20px;
 }
+
+/*För mobil sida*/
+@media screen and (max-width: 660px) {
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .mainsection{
+    width: 100%;
+  }
+
+  .flex-containerbeställning {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .order-input{
+    width: 100%;
+  }
+  
+  .cart{
+    flex-direction: column;
+  }
+  
+  .product-and-title{ 
+    flex-direction: column;
+    max-width: 400px;
+  }
+  
+  .product-and-title h3{ 
+    font-size: 0.8em;
+  }
+
+  .action-price{
+    margin-bottom: 10px;
+  }
+
+  .quantity button{
+    width: 30px;
+    height: 30px;
+  }
+
+  .flex-containerkontakt {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .catimg {
+    object-fit: contain;
+    padding: 10px;
+    max-width:70px;
+    max-height: 70px;
+  }
+
+  .footer b{
+    font-size: 8px;
+  }
+
+}
+
+
+/*för mindre skärmar*/
+@media screen and (min-width: 661px) and (max-width: 1000px) {
+
+  h1 {
+    font-size: 70px;
+  }
+  
+  .flex-containerbeställning {
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 0;
+    width: 90%;
+  }
+  
+  .flex-containerkontakt {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+
+   
+}  
