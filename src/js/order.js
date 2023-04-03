@@ -36,15 +36,18 @@ function productHTML(element, product){
     let subButton = document.createElement("button");
     subButton.innerHTML = "-";
     let productQuantity = document.createElement("p");
-
     productQuantity.innerText = `quantity: ${product.quantity}`;
+    let removeBtn = document.createElement("button");
+    removeBtn.innerHTML = `<i class="fa fa-trash"></i>`;
+
     quantityContainer.appendChild(addButton);
     quantityContainer.appendChild(subButton);
+    quantityContainer.appendChild(removeBtn);
     quantityContainer.appendChild(productQuantity);
     productContainer.appendChild(quantityContainer);
     element.appendChild(productContainer);
 
-    return [addButton, subButton, productQuantity, productContainer];
+    return [addButton, subButton, productQuantity, productContainer, removeBtn];
 }
 
 function addEventListener(elements, product){
@@ -77,12 +80,29 @@ function addEventListener(elements, product){
                 localStorage.setItem('cart', JSON.stringify(cart));
             }
         } else {
-            total = returnRound(total - product.price);
+            total = returnRound(total - (product.price * product.quantity));
             totalPrice.innerHTML = `Total ${total} €`;
             elements[2].innerText = `Quantity: ${product.quantity}`;
             localStorage.setItem('cart', JSON.stringify(cart));
         }
     });
+
+    elements[4].addEventListener('click', e =>{
+        e.preventDefault();
+        cart.itemCount -= product.quantity;
+        document.querySelector("#itemCount").innerText = `Cart (${cart.itemCount})`;
+        let index = cart.productList.indexOf(product);
+        cart.productList.splice(index, 1);
+        elements[3].remove();
+        if(cart.productList.length == 0){
+            localStorage.removeItem('cart');
+            totalPrice.innerHTML = null;
+        }else {
+            total = returnRound(total -= (product.price * product.quantity));
+            totalPrice.innerHTML = `Total ${total} €`;
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    })
 }
 
 function returnRound(expression){
