@@ -136,17 +136,15 @@ let correctOrt = false;
 
 submit.addEventListener('click', e =>{
     e.preventDefault();
-    let customer = new Customer(
+    cart.customer = new Customer(
             nameInput.value,
             emailInput.value,
             telInput.value,
             addressInput.value,
             postnrInput.value,
             ortInput.value);
-
-    cart.customer = customer;
+            
     localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(cart);
     window.document.location = "action-page.html";
 })
 
